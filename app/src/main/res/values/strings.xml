@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Exam Practice</string>
+
+    <string name="criminal">Criminal</string>
+    <string name="natural">Natural</string>
+    <string name="sport">Sport</string>
+    <string name="political">Political</string>
+
+</resources>
