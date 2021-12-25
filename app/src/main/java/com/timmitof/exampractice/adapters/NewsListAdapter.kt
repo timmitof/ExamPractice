@@ -35,9 +35,7 @@ class NewsListAdapter(private val array: java.util.ArrayList<NewsList>, private 
 
         holder.itemView.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString("TITLE", item.titleNews)
-            bundle.putString("IMAGE", item.image)
-            bundle.putString("DESCRIPTION", item.description)
+            bundle.putSerializable("NEWS", item)
 
 
             context.supportFragmentManager.beginTransaction()

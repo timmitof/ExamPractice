@@ -16,6 +16,7 @@ class CategoryAdapter(private val array: ArrayList<Category>, val context: Fragm
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvCategory = view.findViewById<TextView>(R.id.category_textView)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
