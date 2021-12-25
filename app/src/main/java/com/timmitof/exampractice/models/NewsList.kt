@@ -1,7 +1,11 @@
 package com.timmitof.exampractice.models
 
+import java.io.Serializable
+
 data class NewsList(
-    val newsId: Int,
-    val imageView: String,
-    val titleNews: String
-)
+    val categoryId: Int,
+    val image: String,
+    val titleNews: String,
+    val description: String ?= null,
+    val colorText: Int ?= null
+): Serializable

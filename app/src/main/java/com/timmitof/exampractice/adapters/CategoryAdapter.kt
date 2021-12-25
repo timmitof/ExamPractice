@@ -22,17 +22,21 @@ class CategoryAdapter(private val array: ArrayList<Category>, val context: Fragm
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_category, parent, false)
 
+
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = array[position]
         holder.tvCategory.text = holder.itemView.context.getString(item.text)
+        holder.tvCategory.setTextColor(item.color)
         holder.itemView.setOnClickListener {
             val bundle = Bundle()
-            bundle.putSerializable("CATEGORY", item.text)
+            bundle.putInt("CATEGORY", item.id)
+
             context.supportFragmentManager.beginTransaction()
-                .replace(R.id.container, NewsListFragment::class.java, bundle).commit()
+                .replace(R.id.container, NewsListFragment::class.java, bundle)
+                .addToBackStack(null).commit()
         }
     }
 

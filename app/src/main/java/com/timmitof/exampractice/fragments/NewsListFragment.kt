@@ -1,11 +1,10 @@
 package com.timmitof.exampractice.fragments
 
 import android.os.Bundle
-import android.os.RecoverySystem
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.timmitof.exampractice.Constants
 import com.timmitof.exampractice.R
@@ -19,8 +18,12 @@ class NewsListFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_news_list, container, false)
 
+        val currentCategory = requireArguments().getInt("CATEGORY")
+
+        val filteredArray = Constants.news.filter{ it.categoryId == currentCategory} as ArrayList
+
         val recyclerView = view.findViewById<RecyclerView>(R.id.news_recyclerView)
-        recyclerView.adapter = NewsListAdapter(Constants.picture)
+        recyclerView.adapter = NewsListAdapter(filteredArray, requireActivity())
 
         return view
     }

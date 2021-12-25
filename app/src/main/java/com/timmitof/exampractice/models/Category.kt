@@ -1,8 +1,10 @@
 package com.timmitof.exampractice.models
 
-import com.timmitof.exampractice.Categories
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 
 data class Category(
     val id: Int,
-    val text: Int
+    val text: Int,
+    val color: Int
 )
