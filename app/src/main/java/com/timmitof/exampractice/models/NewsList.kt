@@ -6,6 +6,5 @@ data class NewsList(
     val categoryId: Int,
     val image: String,
     val titleNews: String,
-    val description: String ?= null,
-    val colorText: Int ?= null
+    val description: String ?= null
 ): Serializable

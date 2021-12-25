@@ -47,7 +47,7 @@ class InDetailNewsFragment : Fragment() {
         when(news.categoryId){
             Categories.Criminal.ordinal -> description.setTextColor(Color.parseColor("#3E0060"))
             Categories.Natural.ordinal -> description.setTextColor(Color.parseColor("#930000"))
-            Categories.Political.ordinal -> description.setTextColor(Color.parseColor("#000000"))
+            Categories.Political.ordinal -> description.setTextColor(Color.parseColor("#FF3700B3"))
             Categories.Sport.ordinal -> description.setTextColor(Color.parseColor("#2D7500"))
         }
 

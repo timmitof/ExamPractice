@@ -30,7 +30,6 @@ class CategoryAdapter(private val array: ArrayList<Category>, val context: Fragm
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = array[position]
         holder.tvCategory.text = holder.itemView.context.getString(item.text)
-        holder.tvCategory.setTextColor(item.color)
         holder.itemView.setOnClickListener {
             val bundle = Bundle()
             bundle.putInt("CATEGORY", item.id)

@@ -5,6 +5,5 @@ import android.graphics.drawable.ColorDrawable
 
 data class Category(
     val id: Int,
-    val text: Int,
-    val color: Int
+    val text: Int
 )
